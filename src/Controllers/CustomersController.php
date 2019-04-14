@@ -35,7 +35,6 @@ class CustomersController extends Controller
                 $form->addError('email', 'Tento email sa už používa');
                 return false;
             }
-            var_dump($form->data['password']);
             $context->table('zakaznik')->insert([
                 'meno' => $form->data['name'],
                 'adresa1' => $form->data['adresa1'],
